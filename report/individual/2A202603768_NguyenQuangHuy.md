@@ -30,19 +30,19 @@ Mô hình	F1 test	F1 SUB 40	p95 (ms/tin)	USD/1k tin
 
 (a) ml_lr, learning rate.
 
-Em đoán: lr=50 làm loss dao động mạnh và không hội tụ.
+Dự đoán: lr=50 làm loss dao động mạnh và không hội tụ.
 Thực tế: loss vọt lên khoảng 2,5 ở vài epoch đầu rồi tụt xuống và hội tụ về 0,006.
 Vì sao lệch: gradient của logistic regression bị chặn vì |p − y| ≤ 1, nên trọng số không nổ tung. Khi sigmoid bão hòa thì các tin đã đoán đúng gần như không còn tạo gradient. Loss train nhỏ chưa chắc mô hình tốt, phải so F1 trên tập val.
 
 (b) llm_fewshot, few-shot.
 
-Em đoán: F1 tăng lên 0,92 đến 0,95.
+Dự đoán: F1 tăng lên 0,92 đến 0,95.
 Thực tế: F1 = 0,900, thấp hơn zero-shot (0,905), vẫn sai 4/40 tin.
 Vì sao lệch: 4 ví dụ lấy theo thứ tự đầu của tập train, không chọn lọc, nên không dạy thêm ranh giới nào. Prompt dài gấp khoảng 2 lần nên chỉ tốn thêm token input.
 
 (c) hard_eval, 50 case khó.
 
-Em đoán: BoW chặn nhầm tin ham có từ khoá, LLM yếu nhất ở prompt injection, LLM nhỏ đạt 0,75 đến 0,85.
+Dự đoán: BoW chặn nhầm tin ham có từ khoá, LLM yếu nhất ở prompt injection, LLM nhỏ đạt 0,75 đến 0,85.
 Thực tế: BoW đúng 100% ở hai nhóm ham (“tưởng spam” và “nói về spam”), LLM đúng 6/6 ở nhóm injection, LLM nhỏ đạt accuracy 0,92.
 Vì sao lệch: BoW đúng ở nhóm ham chỉ vì gần như đoán ham cho mọi tin (F1 chỉ 0,286), không phải vì hiểu ngữ cảnh. LLM đọc tin như dữ liệu nên không bị lệnh “ignore all previous instructions” đổi nhãn. Nhóm này chỉ có 6 tin nên chưa đủ kết luận prompt phòng thủ có tác dụng.
 
