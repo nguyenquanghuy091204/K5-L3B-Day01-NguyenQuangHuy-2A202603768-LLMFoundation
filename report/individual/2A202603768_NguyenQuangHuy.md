@@ -17,14 +17,14 @@
 ## 2. Kết quả chính
 
 | Mô hình |	F1 test |	F1 SUB 40 |	p95 (ms/tin) |	USD/1k tin |
-|1. BoW + LogReg (tự code)|	0.9239|	0.9474|	0.0828|	0.0|
-2. BoW + MLP (Deep Learning)	0.9662	0.9474	0.3748	0.0
-3a. Encoder (MiniLM) + kNN	0.9541	1.0000	67.8690	0.0
-3b. Encoder (MiniLM) + LogReg	0.9854	1.0000	38.7296	0.0
-3c. Encoder (MiniLM) + MLP head	0.9806	1.0000	63.2966	0.0
-4a. LLM nhỏ zero-shot	0.9048	0.9048	3440.4777	0.0
-4b. LLM lớn zero-shot	0.9474	0.9474	2419.0088	0.0
-4c. LLM nhỏ few-shot	0.9000	0.9000	3497.1713	0.0
+| 1. BoW + LogReg (tự code) |	0.9239 |	0.9474 |	0.0828 |	0.0 |
+| 2. BoW + MLP (Deep Learning) |	0.9662 |	0.9474 |	0.3748 |	0.0 |
+| 3a. Encoder (MiniLM) + kNN |	0.9541 |	1.0000 |	67.8690 |	0.0 |
+| 3b. Encoder (MiniLM) + LogReg |	0.9854 |	1.0000 |	38.7296 |	0.0 |
+| 3c. Encoder (MiniLM) + MLP head	| 0.9806	| 1.0000	| 63.2966	| 0.0
+| 4a. LLM nhỏ zero-shot	| 0.9048	| 0.9048	| 3440.4777	| 0.0
+| 4b. LLM lớn zero-shot	| 0.9474	| 0.9474	| 2419.0088	| 0.0
+| 4c. LLM nhỏ few-shot	| 0.9000	| 0.9000	| 3497.1713	| 0.0
 
 ## 3. Dự đoán và thực tế
 
