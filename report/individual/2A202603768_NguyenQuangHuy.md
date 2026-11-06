@@ -16,7 +16,7 @@
 
 ## 2. Kết quả chính
 
-|Mô hình|	F1 test|	F1 SUB 40|	p95 (ms/tin)|	USD/1k tin|
+| Mô hình |	F1 test |	F1 SUB 40 |	p95 (ms/tin) |	USD/1k tin |
 |1. BoW + LogReg (tự code)|	0.9239|	0.9474|	0.0828|	0.0|
 2. BoW + MLP (Deep Learning)	0.9662	0.9474	0.3748	0.0
 3a. Encoder (MiniLM) + kNN	0.9541	1.0000	67.8690	0.0
